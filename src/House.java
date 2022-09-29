@@ -1,4 +1,4 @@
-public class House implements Comparable<House> {
+public class House implements Comparable<House>, Cloneable {
    int area;
    
    public House(int area){
@@ -20,5 +20,10 @@ public class House implements Comparable<House> {
         else{
             return 0;
         }
+   }
+
+   @Override
+   public Object clone() throws CloneNotSupportedException{
+    return super.clone();
    }
 }
